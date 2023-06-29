@@ -1,0 +1,32 @@
+{
+    "name": "CatLib",
+    "description": "Handy functions library. meow.",
+    "author": "Freyah",
+    "version": "dev.28062023",
+    "color" : "255 255 255",
+    "contact" : "Discord: freyah_",
+	"image" : "cat/main/cat.png",
+    "priority" : 1001,
+    "hooks" : [
+		{
+		  	"hook_id" : "lib/managers/playermanager",
+		  	"script_path" : "lua/meow.lua"
+		},
+		{
+			"hook_id" : "lib/units/beings/player/playerdamage", 
+        	"script_path" : "lua/purr.lua"	
+		},
+		{ 
+			"hook_id" : "core/lib/system/coresystem", 
+			"script_path" : "cat/main/CatLib.lua" 
+		},
+		{
+			"hook_id" : "lib/utils/temporarypropertymanager",
+			"script_path" : "lua/utils/TemporaryPropertyManager.lua"
+		},
+		{
+			"hook_id" : "lib/utils/messages",
+			"script_path" : "lua/utils/messages.lua"
+		}
+    ]
+}
