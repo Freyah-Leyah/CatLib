@@ -23,7 +23,7 @@ self._message_system:register(Message.test1, "meow", callback(self, self, "meow_
  
 * `CatLib:set_time_temporary_property(name, time)` changes duration of temporary property to provided value in `time`.
   
-* `CatLib:add_time_temporary_property(name, time)` changes duration of temporary property by adding or removing provided value in `time`.
+* `CatLib:add_time_temporary_property(name, time)` changes duration of temporary property by adding or subtracting provided value in `time`.
 
 * `CatLib:get_time_from_temporary_property(name)` returns the remaining duration of temporary property.
 
