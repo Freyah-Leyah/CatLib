@@ -1,6 +1,6 @@
 # **CatLib**
 ## List of functions:
-* `CatLib:AddNewMessage(id)` adds new message id in `Messages.lua` table. Call this before you register wanted message. **Example below**
+* `CatLib:AddNewMessage(id)` adds new message id in `Messages.lua` table. Call this before you register your custom message. **Example below**
 ```
 CatLib:AddNewMessage("test1")
 self._message_system:register(Message.test1, "meow", callback(self, self, "meow_2"))
