@@ -1,6 +1,11 @@
-# CatLib
+# **CatLib**
 ## List of functions:
-* `CatLib:AddNewMessage(id)` adds new message id in `Messages.lua` table. Call this before you register wanted message.
+* `CatLib:AddNewMessage(id)` adds new message id in `Messages.lua` table. Call this before you register wanted message. **Example below**
+```
+CatLib:AddNewMessage("test1")
+self._message_system:register(Message.test1, "meow", callback(self, self, "meow_2"))
+```
+
   
 * `CatLib:PreventCrash(func, variables)` allows you to call function in safe mode which will prevent you from crashing (in most cases) and log error. You can call specific function with up to 3 variables typed in table.
     * Example: `CatLib:PreventCrash(test, {1,2,3})` - this will run function `test` and pass `1,2,3` variables to it.
@@ -25,3 +30,8 @@
 
 * `CatLib:check_upgrade_value(category, upgrade, index, default)` allows you to get specific value of wanted upgrade value. (Saves you typing to check if player has upgrade value)
     * Example: `CatLib:check_upgrade_value("player", "tag_team_base", "kill_health_gain", 0)` - checks if player has wanted upgrade, if they do it returns `self.values.player.tag_team_base.kill_health_gain` which is `1.5` in this case. If player does not have wanted upgrade it returns `default` or 0 (if default is not provided).
+ 
+* `CatLib:upgrade_value_based_on_current_health(category, upgrade, health_threshold, default, custom_value_1, custom_value_2, operator, per_health_ratio, limited_increase_health_ratio, custom_limit_value)` changes upgrade value depending on your current health. Values do not need to be in choosen upgrade, you can customize it by using `custom_value_1`, `custom_value_2` and `custom_limit_value`. Check `per_health_ratio` if you want your value to increase the lower/higher your health is, use `limited_increase_health_ratio` to set max value it can increase to, use `custom_limit_value` to set custom limit value.
+    * If not custom value is not provided then `custom_value_1` defaults to first index of provided upgrade value, `custom_value_2` defaults to second index of provided upgrade value, `custom_limit_value` defaults to third index of provided upgrade value
+    * If player does not have provided upgrade value it defaults to `default` or 0 (if default value is not provided)
+    * Example: `CatLib:upgrade_value_based_on_current_health("player", "hostage_health_regen_addend", 0.5, 0, nil, nil, "<", true, true)` - defaults to 0, value increases the lower your health is when below 50% (`0.5`) health (`per_health_ratio` is `true`) up to (`limited_increase_health_ratio` is `true`) third index value of `hostage_health_regen_addend` (`custom_limit_value` is `nil`), uses first and second index values of `hostage_health_regen_addend` due to `custom_value_1`, `custom_value_2` being `nil`.
