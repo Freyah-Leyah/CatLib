@@ -16,7 +16,7 @@ self._message_system:register(Message.test1, "meow", callback(self, self, "meow_
 * `CatLib:string_to_operator(string, x, y)` allows you to convert string to operator.
     * Example: `CatLib:string_to_operator(">", 5, 3)` - checks `5 > 3`, in this case it would return `true`.
  
-*  `CatLib:rainbow(base_mul, speed_mul, flat_change)` (animated) Rainbow Color. `base_mul` (table), `speed_mul` and `flat_change` (table) are for changing speed and the way colors shift through.
+*  `CatLib:Rainbow(base_mul, speed_mul, flat_change)` (animated) Rainbow Color. `base_mul` (table), `speed_mul` and `flat_change` (table) are for changing speed and the way colors shift through.
     * *I recommend having `base_mul` at `5,2,3` or generally different values (for e.g. **not** 1,1,1).*
     * Note: colors will shift as long as this function is being called.
     *  Returns R, G, B only, so you need to do for example:
