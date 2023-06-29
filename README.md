@@ -7,7 +7,7 @@ self._message_system:register(Message.test1, "meow", callback(self, self, "meow_
 ```
 
   
-* `CatLib:PreventCrash(func, variables)` allows you to call function in safe mode which will prevent you from crashing (in most cases) and log error. You can call specific function with any variables.
+* `CatLib:PreventCrash(func, ...)` allows you to call function in safe mode which will prevent you from crashing (in most cases) and log error. You can call specific function with any variables.
     * Example: `CatLib:PreventCrash(test, a, b, c)` - this will run function `test` and pass `a, b, c` variables to it.
       
 * `CatLib:dec_round(num, decimals)` rounds up to wanted decimals places.
