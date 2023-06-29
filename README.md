@@ -17,7 +17,7 @@ self._message_system:register(Message.test1, "meow", callback(self, self, "meow_
     * Example: `CatLib:string_to_operator(">", 5, 3)` - checks `5 > 3`, in this case it would return `false`.
  
 *  `CatLib:rainbow(base_mul, speed_mul, flat_change)` (animated) Rainbow Color. `base_mul` (table), `speed_mul` and `flat_change` (table) are for changing speed and the way colors shift through.
-    * *I recommend having `base_mul` at `5,2,3` or generally desynced.*
+    * *I recommend having `base_mul` at `5,2,3` or generally desynced values.*
     * Example: `CatLib:rainbow({5, 2, 3}, 10, {0, 20, 50})`
  
 * `CatLib:set_time_temporary_property(name, time)` changes duration of temporary property to provided value in `time`.
