@@ -1,6 +1,5 @@
 Hooks:PreHook(PlayerDamage, "damage_melee", "CatLibAddRawDamageData&Msg", function(self, attack_data)
 	attack_data.raw_damage = attack_data.damage
-	managers.player:send_message(Message.OnPlayerDamageMelee, nil, attack_data)
 end)
 
 Hooks:PreHook(PlayerDamage, "damage_explosion", "CatLibAddRawDamageDataExp", function(self, attack_data)
