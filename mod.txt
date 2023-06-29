@@ -2,7 +2,7 @@
     "name": "CatLib",
     "description": "Handy functions library. meow.",
     "author": "Freyah",
-    "version": "1.0.v29062023",
+    "version": "1.01.v29062023",
     "color" : "255 255 255",
     "contact" : "Discord: freyah_",
 	"image" : "cat/main/cat.png",

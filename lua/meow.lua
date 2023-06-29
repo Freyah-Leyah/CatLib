@@ -1,16 +1,6 @@
-function CatLib:PreventCrash(func, variables)
+function CatLib:PreventCrash(func, ...)
 	local lib = "CatLib"
-
-	if variables then
-		local fun, error = pcall(func, variables[1], (variables[2] or nil), (variables[3] or nil))
-		if not fun then
-			log("[" .. lib .. "] An error occurred in " .. tostring(func) .. " result: " .. tostring(error))
-		end
-
-		return
-	end
-
-	local fun, error = pcall(func)
+	local fun, error = pcall(func, ...)
 
 	if not fun then
 		log("[" .. lib .. "] An error occurred in " .. tostring(func) .. " result: " .. tostring(error))
@@ -46,7 +36,7 @@ function CatLib:string_to_operator(string, x, y)
 	return look_up[string](x, y)
 end
 
-function CatLib:rainbow(base_mul, speed_mul, flat_change)
+function CatLib:Rainbow(base_mul, speed_mul, flat_change)
 	local time = Application:time()
 	local r = math.max(math.sin(time * ((base_mul[1] or 1) * (speed_mul or 1)) + (flat_change[1] or 0)), 0.1)
 	local g = math.max(math.sin(time * ((base_mul[2] or 1) * (speed_mul or 1)) + (flat_change[2] or 0)), 0.1)

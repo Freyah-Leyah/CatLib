@@ -2,7 +2,6 @@ _G.CatLib = _G.CatLib or {}
 
 CatLib._new_messages_catlib = CatLib._new_messages_catlib or {}
 CatLib._num_catlib = CatLib._num_catlib or 60
-CatLib._parts = CatLib._parts or {}
 
 function CatLib:AddNewMessage(id)
     require("lib/utils/Messages")
