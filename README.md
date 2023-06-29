@@ -28,7 +28,7 @@ self._message_system:register(Message.test1, "meow", callback(self, self, "meow_
 
 * `CatLib:fetch_henchmans_upgrades(definition_id, upgrade_id, default)` fetchs value of ai teammates wanted ability (even if not ingame). `definition_id` is the id in blackmarket henchmans loadout, `upgrade_id` is the id in tweakdata. Returns `default` or 0 (if default is not provided) if ai teammates does not have wanted ability equipped.
 
-* `CatLib:check_upgrade_value(category, upgrade, index, default)` allows you to get specific value of wanted upgrade value. (Saves you typing to check if player has upgrade value)
+* `CatLib:check_upgrade_value(category, upgrade, index, default)` allows you to get specific value of wanted upgrade value. (Saves you typing a check if player has upgrade value)
     * Example: `CatLib:check_upgrade_value("player", "tag_team_base", "kill_health_gain", 0)` - checks if player has wanted upgrade, if they do it returns `self.values.player.tag_team_base.kill_health_gain` which is `1.5` in this case. If player does not have wanted upgrade it returns `default` or 0 (if default is not provided).
  
 * `CatLib:upgrade_value_based_on_current_health(category, upgrade, health_threshold, default, custom_value_1, custom_value_2, operator, per_health_ratio, limited_increase_health_ratio, custom_limit_value)` changes upgrade value depending on your current health. Values do not need to be in choosen upgrade, you can customize it by using `custom_value_1`, `custom_value_2` and `custom_limit_value`. Check `per_health_ratio` if you want your value to increase the lower/higher your health is, use `limited_increase_health_ratio` to set max value it can increase to, use `custom_limit_value` to set custom limit value.
