@@ -18,8 +18,12 @@ self._message_system:register(Message.test1, "meow", callback(self, self, "meow_
  
 *  `CatLib:rainbow(base_mul, speed_mul, flat_change)` (animated) Rainbow Color. `base_mul` (table), `speed_mul` and `flat_change` (table) are for changing speed and the way colors shift through.
     * *I recommend having `base_mul` at `5,2,3` or generally desynced values.*
-    * Example: `CatLib:rainbow({5, 2, 3}, 10, {0, 20, 50})`
     * Note: colors will shift as long as this function is being called.
+    *  Returns R, G, B only, so you need to do for example:
+```
+local r,g,b = CatLib:rainbow({5, 2, 3}, 10, {0, 20, 50})
+color(1,r,g,b)
+```
  
 * `CatLib:set_time_temporary_property(name, time)` changes duration of temporary property to provided value in `time`.
   
